@@ -2,7 +2,7 @@ from pymongo import MongoClient
 import json
 
 class DatabaseManager:
-    def __init__(self, uri="mongodb://localhost:27017/", db_name="parser_db", collection_name="items"):
+    def __init__(self, uri="mongodb://192.168.51.254:27019/", db_name="parser_db", collection_name="items"):
         self.client = MongoClient(uri, serverSelectionTimeoutMS=3000)
         self.db = self.client[db_name]
         self.collection = self.db[collection_name]
